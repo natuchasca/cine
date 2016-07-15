@@ -1,0 +1,27 @@
+header {
+	background-color: green;
+	color: white;
+	height: 80px;
+}
+
+section {
+	padding: 20px;
+}
+
+.btn {
+	width: 100px;
+	padding: 0;
+}
+
+img {
+	max-width: 200px;
+	max-height: 300px;
+	margin: 10px;
+	float: left;
+}
+
+
+.video {
+	padding: 20px 0px;
+}
+

@@ -3,9 +3,122 @@
 	<head>
 	  <meta charset="UTF-8">
 	  <title>Catalogo de peliculas</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h1>Cinerama</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-md-6 text-right">
+						<h5>Escoge una categoria:</h5>
+					</div>
+					<div class="col-xs-6 col-md-6">
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    Todas
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">Ficción</a></li>
+						    <li><a href="#">Acción</a></li>
+						    <li><a href="#">Infantil</a></li>
+						    <li><a href="#">Todas</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="peliculas">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pelicula">
+								<div class="Acción">
+									<a href="#" class="accion1">
+										<img src="img/accion1.jpg" height="500" width="355" >
+									</a>							
+								</div>
+								<div class="Acción">
+									<a href="#">
+										<img src="img/accion2.jpg" height="415" width="293" class="accion2">
+									</a>								
+								</div>
+								<div class="Acción">
+									<a href="#">
+										<img src="img/accion3.jpg" height="756" width="510" class="accion3">
+									</a>								
+								</div>
+								<div class="Acción">
+									<a href="#">
+										<img src="img/accion4.jpg" height="802" width="550" class="accion4">
+									</a>								
+								</div>
+								<div class="Ficción">
+									<a href="#">
+										<img src="img/53E.jpg" height="960" width="664" class="ficcion">
+									</a>	
+								</div>
+								<div class="Ficción">
+									<a href="#">					
+										<img src="img/gravedad.jpg" height="443" width="300" class="ficcion">
+									</a>
+								</div>
+								<div class="Ficción">
+									<a href="#">
+										<img src="img/men_in_black3.jpg" height="428" width="300" class="ficcion">
+									</a>									
+								</div>
+								<div class="Ficción">
+									<a href="#">
+										<img src="img/the_matrix.jpg" height="984" width="711" class="ficcion">
+									</a>		
+								</div>
+								<div class="Infantil">
+									<a href="#">
+										<img src="img/infantil.jpg" height="889" width="600" alt="infantil">
+									</a>
+								</div>
+								<div class="Infantil">
+									<a href="#">
+										<img src="img/infantil2.jpg" height="846" width="600" alt="infantil">
+									</a>
+								</div>
+								<div class="Infantil">
+									<a href="#">
+										<img src="img/infantil3.jpg" height="857" width="600" alt="infantil">
+									</a>
+								</div>
+								<div class="Infantil">
+									<a href="#">
+										<img src="img/infantil4.jpg" height="1714" width="1200" alt="infantil">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			
+			
+
+
+
+		<!-- SCRIPTS -->
+        <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
