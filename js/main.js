@@ -35,6 +35,7 @@ $(document).ready(function(){
 
 	$(".pelicula div.Acción").click(function() {
 		$("a.accion1").attr("href", "peliculas.html");
+		window.open(url, '_blank');
 		$(".titulo").text("300");
 		$("p").text("La ultima batalla de los 300 es una pelicula épica-de acción de 2007 dirigida por Zack Snyder. Es la adaptación cinematográfica de la serie limitada de cómics del mismo nombre de Frank Miller, la cual relata la Batalla de las Termópilas.")
 	});
@@ -45,7 +46,7 @@ $(document).ready(function(){
 /*
 
 		url = $(this).attr("href");
-	    window.open(url, '_blank');
+	    
 
 
 		*/
