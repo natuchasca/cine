@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 	//Activo Categorias para seleccionar peliculas
-	$("ul.dropdown-menu li a").click(function() {
+	$("ul.dropdown-menu li a").click(function(evt) {
+		evt.preventDefault();
 		var categoria = $(this).text();
 		
 		if(categoria == "Todas") {
@@ -31,17 +32,67 @@ $(document).ready(function(){
 
 	
 	    
-	$(".titulo").text("300");
-	$("p").text("La ultima batalla de los 300 es una pelicula épica-de acción de 2007 dirigida por Zack Snyder. Es la adaptación cinematográfica de la serie limitada de cómics del mismo nombre de Frank Miller, la cual relata la Batalla de las Termópilas.");
-	$(".video").attr("src", "https://www.youtube.com/embed/4_c0_znpbDQ");  
+	//$(".titulo").text("300");
+	//$("p").text("La ultima batalla de los 300 es una pelicula épica-de acción de 2007 dirigida por Zack Snyder. Es la adaptación cinematográfica de la serie limitada de cómics del mismo nombre de Frank Miller, la cual relata la Batalla de las Termópilas.");
+	//$(".video").attr("src", "https://www.youtube.com/embed/4_c0_znpbDQ");  
 
-	
+	cargar();
 
 });//Document.ready
 
 
+function cargar () {
+	var peliculas = [
+		{
+			titulo: "300",
+			descripcion: "La ultima batalla de los 300 es una pelicula épica-de acción de 2007 dirigida por Zack Snyder. Es la adaptación cinematográfica de la serie limitada de cómics del mismo nombre de Frank Miller, la cual relata la Batalla de las Termópilas.",
+			video: "https://www.youtube.com/embed/4_c0_znpbDQ",
+		},
+		{
+			titulo: "500",
+			descripcion: "La ultima batalla de los 300 es una pelicula épica-de acción de 2007 dirigida por Zack Snyder. Es la adaptación cinematográfica de la serie limitada de cómics del mismo nombre de Frank Miller, la cual relata la Batalla de las Termópilas.",
+			video: "https://www.youtube.com/embed/4_c0_znpbDQ",
+		}
+	]
+
+	var movie = window.location.hash.split("=")[1];
+	var data = peliculas.filter(function(pelicula) {
+		return pelicula.titulo === movie;
+	})[0]
+
+	//Verificar si el objeto tiene los valores 
+
+	if (data && data.hasOwnProperty('titulo')) {
+		$(".titulo").text(data.titulo);
+		$("p").text(data.descripcion);
+		$(".video").attr(data.video); 
+	}
+
+	 
+}
+
+
+
 	
-	
+
+//300
+//video <iframe width="560" height="315" src="https://www.youtube.com/embed/4_c0_znpbDQ" frameborder="0" allowfullscreen></iframe>
+
+//Monsters University
+//<iframe width="560" height="315" src="https://www.youtube.com/embed/DpQlsaTiVT0" frameborder="0" allowfullscreen></iframe>
+//Mike Wazowski (Billy Crystal) y James P. Sullivan (John Goodman) son amigos inseparables, pero no fue siempre así. Cuando se conocieron en la Universidad, no se podían soportar, pero acabaron superando sus diferencias y se convirtieron en los mejores amigos. Precuela de la exitosa "Monstruos, S.A.".
+
+//Toy Sory 3
+// Cuando su dueño Andy se prepara para ir a la universidad, el vaquero Woody, el astronauta Buzz y el resto de sus amigos juguetes comienzan a preocuparse por su incierto futuro. Efectivamente todos acaban en una guardería, donde por ejemplo la muñeca Barbie conocerá al guapo Ken. Esta reunión de nuestros amigos con otros nuevos juguetes no será sino el principio de una serie de trepidantes y divertidas aventuras.
+// <iframe width="560" height="315" src="https://www.youtube.com/embed/xkPhZHt5TKM" frameborder="0" allowfullscreen></iframe>
+
+// Big Hero 6
+// En la metrópolis de San Fransokyo (cruce de San Francisco y Tokio), vive Hiro Hamada, quien aprende a sacar provecho de su capacidad gracias a su brillante hermano Tadashi y sus también brillantes amigos: la buscadora de adrenalina GoGo Tamago, el meticuloso de la limpieza Wasabi-No-Ginger, la genia de la química Honey Lemon y el fanático de los cómics Fred. Cuando tras un devastador giro de los acontecimientos, se ven envueltos en una peligrosa conspiración que tiene lugar en las calles de San Fransokyo, Hiro recurre a su amigo más íntimo: un robot llamado Baymax, y transforma al grupo en una banda de héroes de última tecnología decididos a resolver el misterio.
+// <iframe width="560" height="315" src="https://www.youtube.com/embed/boO2nQ3RJFs" frameborder="0" allowfullscreen></iframe>
+
+// Lego Movie
+// Cuenta la historia de Emmet, una figurita LEGO absolutamente normal y fiel a las normas que es identificada por error como la persona más extraordinaria y la clave para salvar al mundo. Se ve entonces inmerso en una búsqueda épica para detener a un malvado tirano junto a un grupo de desconocidos, una aventura para la que Emmet no está preparado en absoluto.
+// <iframe width="560" height="315" src="https://www.youtube.com/embed/a0dgofxMyik" frameborder="0" allowfullscreen></iframe>
 
 
 /*
